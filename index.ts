@@ -102,7 +102,18 @@ for (let i = 0; i < albums.length; i++){
  }
 
 }
-console.log(topAlbum)   
+///console.log(topAlbum)   
+let topArtist: string = ""
+let maxListens: number = -1
+for (let i = 0; i < albums.length; i++) {
+  let artist = albums[i][0]
+  let listens = albums[i][2]
+  if (listens > maxListens) {
+    maxListens = listens
+    topArtist = artist
+  }
+}
+console.log(topArtist)
 // count the number of words, sentences, characters
 // how many times word proof-of-work is present in the text
 // console log all sentences where the word proof-of-work is mentioned
@@ -148,3 +159,4 @@ for (let i = 0; i < newWords.length; i++) {
   }
 }
 //console.log(findNewWords.length)
+
