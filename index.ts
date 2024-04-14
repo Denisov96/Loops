@@ -113,7 +113,23 @@ for (let i = 0; i < albums.length; i++) {
     topArtist = artist
   }
 }
-console.log(topArtist)
+///console.log(topArtist)
+interface Album {
+  artist: string;
+  numberOfAlbums: number;
+}
+const artistCounts: { [key: string]: number } = {};
+for (let i = 0; i < albums.length; i++) {
+    const artist = albums[i][0];
+    artistCounts[artist] = (artistCounts[artist] || 0) + 1;
+}
+const artistsWithMultipleAlbums: Album[] = [];
+for (const artist in artistCounts) {
+    if (artistCounts[artist] > 1) {
+        artistsWithMultipleAlbums.push({ artist: artist, numberOfAlbums: artistCounts[artist] });
+    }
+}
+console.log(artistsWithMultipleAlbums);
 // count the number of words, sentences, characters
 // how many times word proof-of-work is present in the text
 // console log all sentences where the word proof-of-work is mentioned
