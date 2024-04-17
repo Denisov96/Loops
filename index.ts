@@ -113,7 +113,7 @@ for (let i = 0; i < albums.length; i++) {
     topArtist = artist
   }
 }
-///console.log(topArtist)
+console.log(topArtist)
 interface Album {
   artist: string;
   numberOfAlbums: number;
@@ -129,7 +129,7 @@ for (const artist in artistCounts) {
         artistsWithMultipleAlbums.push({ artist: artist, numberOfAlbums: artistCounts[artist] });
     }
 }
-console.log(artistsWithMultipleAlbums);
+///console.log(artistsWithMultipleAlbums);
 // count the number of words, sentences, characters
 // how many times word proof-of-work is present in the text
 // console log all sentences where the word proof-of-work is mentioned
